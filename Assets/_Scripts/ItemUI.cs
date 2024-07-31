@@ -15,6 +15,10 @@ public class ItemUI : MonoBehaviour {
         Instance = this;
     }
 
+    public bool IsHoldingItem() {
+        return _heldItem != null;
+    }
+
     public void SetItem(ItemSO item) {
 		_heldItem = item;
 		_itemSlotImage.enabled = true;
