@@ -872,7 +872,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1149736070
 RectTransform:
   m_ObjectHideFlags: 0
@@ -899,7 +899,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1149736069}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -1132,6 +1132,8 @@ MonoBehaviour:
   _speed: 5
   _swordSwingTime: 1
   _sword: {fileID: 716231886}
+  _itemPrefab: {fileID: 1050635750647109047, guid: 2b302fb10a011354fa6f6f604fa80e99, type: 3}
+  _droppedItemAreaRadius: 0.375
 --- !u!58 &1953596867
 CircleCollider2D:
   m_ObjectHideFlags: 0

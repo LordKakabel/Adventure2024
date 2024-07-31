@@ -17,9 +17,15 @@ public class ItemUI : MonoBehaviour {
 
     public void SetItem(ItemSO item) {
 		_heldItem = item;
-		Debug.Log(_itemSlotImage.name);
 		_itemSlotImage.enabled = true;
 		_itemSlotImage.sprite = item.Sprite;
 		_itemSlotImage.color = item.Color;
 	}
+
+    public ItemSO DropItem() {
+        _itemSlotImage.enabled = false;
+        ItemSO droppedCopy = _heldItem;
+        _heldItem = null;
+        return droppedCopy;
+    }
 }
