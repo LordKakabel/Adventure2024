@@ -19,6 +19,8 @@ public class ItemUI : MonoBehaviour {
         return _heldItem != null;
     }
 
+    public ItemSO GetItemSO() { return _heldItem; }
+
     public void SetItem(ItemSO item) {
 		_heldItem = item;
 		_itemSlotImage.enabled = true;
