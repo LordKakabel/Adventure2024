@@ -43,4 +43,10 @@ public class PlayerMovement : MonoBehaviour {
         _sword.SetActive(false);
         _canMove = true;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.gameObject.GetComponent<Item>()) {
+            Destroy(collision.gameObject);
+        }
+    }
 }
