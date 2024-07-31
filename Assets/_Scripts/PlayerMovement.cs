@@ -45,7 +45,9 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.gameObject.GetComponent<Item>()) {
+        Item item = collision.gameObject.GetComponent<Item>();
+        if (item) {
+            ItemUI.Instance.SetItem(item.ItemSO);
             Destroy(collision.gameObject);
         }
     }
