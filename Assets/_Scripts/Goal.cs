@@ -7,7 +7,7 @@ public class Goal : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision) {
         // If the player has the needed item, display win screen
-        if (collision.gameObject.GetComponent<PlayerMovement>()) {
+        if (collision.gameObject.GetComponent<PlayerHitBox>()) {
             if (ItemUI.Instance.GetItemSO() == _itemSONeededToUnlock) {
                 UIManager.Instance.WinScreen();
             }

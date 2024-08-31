@@ -8,4 +8,13 @@ public class Enemy : MonoBehaviour {
             Destroy(gameObject);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        // If we touched the player,
+        PlayerHitBox player = collision.gameObject.GetComponent<PlayerHitBox>();
+            if (player) {
+                // Damage it
+                player.Damage();
+            }
+    }
 }

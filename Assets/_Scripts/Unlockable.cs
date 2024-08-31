@@ -5,9 +5,9 @@ using UnityEngine;
 public class Unlockable : MonoBehaviour {
 	[SerializeField] ItemSO _itemSONeededToUnlock;
 
-    private void OnCollisionEnter2D(Collision2D collision) {
+    private void OnTriggerEnter2D(Collider2D collision) {
         // If the player has the needed item, delete it and destroy self
-        if (collision.gameObject.GetComponent<PlayerMovement>()) {
+        if (collision.gameObject.GetComponent<PlayerHitBox>()) {
             if (ItemUI.Instance.GetItemSO() == _itemSONeededToUnlock) {
                 ItemUI.Instance.DropItem();
                 Destroy(gameObject);
