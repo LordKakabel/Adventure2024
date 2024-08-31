@@ -3,18 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour {
-    private void OnTriggerStay2D(Collider2D collision) {
+    private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.GetComponentInChildren<PlayerWeapon>()) {
             Destroy(gameObject);
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision) {
-        // If we touched the player,
-        PlayerHitBox player = collision.gameObject.GetComponent<PlayerHitBox>();
+        } else {
+            // If we touched the player,
+            PlayerHitBox player = collision.gameObject.GetComponent<PlayerHitBox>();
             if (player) {
                 // Damage it
                 player.Damage();
             }
+        }
     }
 }
