@@ -24,6 +24,8 @@ public class PlayerMovement : MonoBehaviour {
     private void SwingSword() {
         _canMove = false;
         _sword.SetActive(true);
+        // Added position change to help trigger detection.
+        _sword.transform.position = _sword.transform.position + (Vector3.one * 0.0001f);
         StartCoroutine(SwingSwordCoroutine());
     }
 
@@ -46,6 +48,8 @@ public class PlayerMovement : MonoBehaviour {
     private IEnumerator SwingSwordCoroutine() {
         yield return _swordSwingYield;
 
+        // Added position change to help trigger detection.
+        _sword.transform.position = _sword.transform.position - (Vector3.one * 0.0001f);
         _sword.SetActive(false);
         _canMove = true;
     }

@@ -14,8 +14,9 @@ public class PlayerHitBox : MonoBehaviour {
     }
 
     public void Damage() {
-        Destroy(transform.parent.gameObject);
-        UIManager.Instance.GameOverScreen();
+        Debug.Log("Damage!");
+        //Destroy(transform.parent.gameObject);
+        //UIManager.Instance.GameOverScreen();
     }
 
     private bool DropItem() {
