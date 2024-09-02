@@ -244,5 +244,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18afeb087b8300e4281c2dd2a44c94c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _state: 0
+  _state: 1
   _speed: 3
+  _waypoints: []
