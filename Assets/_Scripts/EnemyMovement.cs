@@ -84,4 +84,8 @@ public class EnemyMovement : MonoBehaviour {
 
         _state = State.Wandering;
     }
+
+    private void OnDisable() {
+        StopAllCoroutines();
+    }
 }

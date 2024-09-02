@@ -57,4 +57,8 @@ public class PlayerMovement : MonoBehaviour {
     public Vector3 GetDirection() {
         return _direction;
     }
+
+    private void OnDisable() {
+        StopAllCoroutines();
+    }
 }
