@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour {
     [SerializeField] TextMeshProUGUI _winText;
     [SerializeField] TextMeshProUGUI _gameOverText;
     [SerializeField] GameObject _menuPanel;
+    [SerializeField] GameObject _pausePanel;
     [SerializeField] Button _startButton;
     [SerializeField] Button _quitButton;
 
@@ -25,7 +26,7 @@ public class UIManager : MonoBehaviour {
     }
 
     private void Start() {
-        Time.timeScale = 0;
+        MainMenu();
     }
 
     private void Update() {
@@ -70,6 +71,7 @@ public class UIManager : MonoBehaviour {
 
     public void TogglePause() {
         if (_gameState == GameState.Paused) {
+            _pausePanel.SetActive(false);
             _gameState = GameState.Game;
             Time.timeScale = 1;
             MusicManager.Instance.IsPaused(false);
@@ -77,6 +79,15 @@ public class UIManager : MonoBehaviour {
             _gameState = GameState.Paused;
             Time.timeScale = 0;
             MusicManager.Instance.IsPaused(true);
+            _pausePanel.SetActive(true);
         }
+    }
+
+    public void MainMenu() {
+        Time.timeScale = 0;
+        _pausePanel.SetActive(false);
+        _menuPanel.SetActive(true);
+        _gameState = GameState.Menu;
+        MusicManager.Instance.MainMenuMusic();
     }
 }
