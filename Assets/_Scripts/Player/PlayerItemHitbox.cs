@@ -38,7 +38,6 @@ public class PlayerItemHitbox : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        Debug.Log(collision.gameObject.ToString());
         // If there IS an item,
         Item item = collision.gameObject.GetComponent<Item>();
         if (item) {
