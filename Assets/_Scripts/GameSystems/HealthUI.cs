@@ -28,4 +28,8 @@ public class HealthUI : MonoBehaviour {
             Destroy(child.gameObject);
         }
     }
+
+    public void SetHealth(Health health) {
+        _health = health;
+    }
 }

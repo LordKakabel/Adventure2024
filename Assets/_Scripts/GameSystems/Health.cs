@@ -10,7 +10,7 @@ public class Health : MonoBehaviour {
 
 	private int _currentHealth;
 
-    private void Start() {
+    private void Awake() {
         _currentHealth = _maxHealth;
     }
 

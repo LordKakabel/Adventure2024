@@ -134,6 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17093ff17db633748aced5d567055d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _healthBar: {fileID: 1298868103186817892, guid: 7f78cc6467a2a694e9e265e4784f09b1, type: 3}
 --- !u!1 &8071324161324351478
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,6 +147,7 @@ GameObject:
   - component: {fileID: 7057704089497337854}
   - component: {fileID: 399814407674153413}
   - component: {fileID: 1189069343282647333}
+  - component: {fileID: 5424066973864632050}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
@@ -247,3 +249,18 @@ MonoBehaviour:
   _state: 1
   _speed: 3
   _waypoints: []
+  _idleTime: 3
+  _waypointMinimumDistance: 0.05
+--- !u!114 &5424066973864632050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8071324161324351478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8268b5999c1ea104897b7a783c7451fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 3

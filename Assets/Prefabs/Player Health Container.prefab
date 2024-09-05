@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8632116800149002868}
   - component: {fileID: 8439979253833437598}
   m_Layer: 5
-  m_Name: Health Container
+  m_Name: Player Health Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
